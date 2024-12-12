@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">nutritrack2</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="enter_your_surname">Enter your surname </string>
+    <string name="abc12_gmail_com">abc12@gmail.com</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="stars">************</string>
+    <string name="sign_up">Sign up</string>
+    <string name="surname">Surname</string>
+    <string name="name">Name</string>
+    <string name="btn_login">Login</string>
+    <string name="hello_123">hello_123</string>
+    <string name="dinner">Dinner</string>
+    <string name="add_food">Add Food</string>
+    <string name="profile">Profile</string>
+    <string name="save">Save</string>
+    <string name="back_to_home">Back to home</string>
+    <string name="logout">Log out</string>
+</resources>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".HomePage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#f5f5f5">
+
+    <!-- User Info Header -->
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_123"
+        android:textColor="#333333"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="2 May, Monday"
+        android:textColor="#666666"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_username" />
+
+    <!-- Macro Nutrients Chart -->
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/macro_chart"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_date" />
+
+    <!-- Calorie Counter -->
+    <LinearLayout
+        android:id="@+id/calorie_counter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintTop_toBottomOf="@id/macro_chart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Goal"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:id="@+id/tv_goal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="1530"
+            android:textColor="#00796b"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:id="@+id/tv_current"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="830"
+            android:textColor="#00796b"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remaining"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:id="@+id/tv_remaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="700"
+            android:textColor="#00796b"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Dinner Section -->
+    <TextView
+        android:id="@+id/dinner_section"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/dinner"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/calorie_counter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Food Items -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/food_items_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/dinner_section"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_add_food"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Add Food Button -->
+
+    <Button
+        android:id="@+id/btn_add_food"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background"
+        android:backgroundTint="#00796b"
+        android:text="@string/add_food"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btn_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background"
+        android:backgroundTint="#00796b"
+        android:text="@string/profile"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
